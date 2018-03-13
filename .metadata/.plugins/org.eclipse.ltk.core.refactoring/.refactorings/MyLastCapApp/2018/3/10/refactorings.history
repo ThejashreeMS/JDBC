@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MyLastCapApp/WebContent/WEB-INF/Hello.html&apos; to &apos;index.html&apos;" description="Rename resource &apos;Hello.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/WEB-INF/Hello.html" name="index.html" stamp="1520576416870" updateReferences="true"/>
+</session>

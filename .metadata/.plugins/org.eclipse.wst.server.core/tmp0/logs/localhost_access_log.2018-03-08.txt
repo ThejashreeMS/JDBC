@@ -1,0 +1,9 @@
+127.0.0.1 - - [08/Mar/2018:22:39:06 +0530] "GET / HTTP/1.1" 404 1073
+0:0:0:0:0:0:0:1 - - [08/Mar/2018:23:05:02 +0530] "GET /MyLastCapApp/Hello.html HTTP/1.1" 404 1100
+0:0:0:0:0:0:0:1 - - [08/Mar/2018:23:05:03 +0530] "GET /favicon.ico HTTP/1.1" 404 1084
+0:0:0:0:0:0:0:1 - - [08/Mar/2018:23:05:21 +0530] "GET /MyLastCapApp/WEB-INF/Hello.html HTTP/1.1" 404 1046
+0:0:0:0:0:0:0:1 - - [08/Mar/2018:23:05:32 +0530] "GET /MyLastCapApp/WEB-INF/Hello.html HTTP/1.1" 404 1046
+0:0:0:0:0:0:0:1 - - [08/Mar/2018:23:15:52 +0530] "GET /MyLastCapApp/WEB-INF/Hello.html HTTP/1.1" 404 1046
+0:0:0:0:0:0:0:1 - - [08/Mar/2018:23:26:39 +0530] "GET /MyLastCapApp/Hello.html HTTP/1.1" 404 1100
+0:0:0:0:0:0:0:1 - - [08/Mar/2018:23:26:40 +0530] "GET /MyLastCapApp/Hello.html HTTP/1.1" 404 1100
+0:0:0:0:0:0:0:1 - - [08/Mar/2018:23:26:59 +0530] "GET /MyLastCapApp/WEB-INF/Hello.html HTTP/1.1" 404 1046

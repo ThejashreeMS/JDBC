@@ -1,0 +1,60 @@
+
+public class Asset 
+{
+private int assetid;
+private String assetname;
+private String assetdes;
+private int quantity;
+private String status;
+
+public void Asset(int assetid, String assetname, String assetdes, int quantity, String status) 
+{
+	
+	this.assetid = assetid;
+	this.assetname = assetname;
+	this.assetdes = assetdes;
+	this.quantity = quantity;
+	this.status = status;
+}
+
+public int getAssetid() {
+	return assetid;
+}
+
+public void setAssetid(int assetid) {
+	this.assetid = assetid;
+}
+
+public String getAssetname() {
+	return assetname;
+}
+
+public void setAssetname(String assetname) {
+	this.assetname = assetname;
+}
+
+public String getAssetdes() {
+	return assetdes;
+}
+
+public void setAssetdes(String assetdes) {
+	this.assetdes = assetdes;
+}
+
+public int getQuantity() {
+	return quantity;
+}
+
+public void setQuantity(int quantity) {
+	this.quantity = quantity;
+}
+
+public String getStatus() {
+	return status;
+}
+
+public void setStatus(String status) {
+	this.status = status;
+}
+
+}

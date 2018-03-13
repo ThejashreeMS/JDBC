@@ -1,0 +1,41 @@
+package com.caps;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.caps.dto.Person;
+
+public class InsertNewPeople extends HttpServlet{
+@Override
+protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	try {
+		Class.forName("com.mysql.jdbc.Driver");
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	PrintWriter pw=resp.getWriter();
+	resp.setContentType("text/html");
+	int regno=(Integer.parseInt(req.getParameter("regno")));
+	String fname=req.getParameter("fname");
+	String lname=req.getParameter("lname");
+	String password=req.getParameter("pwd");
+	Person p=new Person();
+	p.setFname(fname);
+	p.setLname(lname);
+	p.setRegno(regno);
+	p.setPassword(password);
+	
+	JDBCImpl ji=new JDBCImpl();
+	boolean res=ji.insertDetails(p);
+	if(res)
+		pw.print("Data insertion successfull");
+	else
+		pw.print("Data insertion failed");
+}
+}

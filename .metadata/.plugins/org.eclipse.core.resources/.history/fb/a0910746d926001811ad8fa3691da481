@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="post" action="http://localhost:8080/MyLastCapApp/">
+<table>
+<tr><td>RegNo:</td><td><input type="text" name="regno" required></td></tr>
+<tr><td>First Name:</td><td><input type="text" name="fname" required></td></tr>
+<tr><td>Last Name:</td><td><input type="text" name="lname" required></td></tr>
+
+</table>
+</form>
+</body>
+</html>

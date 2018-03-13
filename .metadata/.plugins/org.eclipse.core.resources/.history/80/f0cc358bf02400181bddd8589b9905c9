@@ -1,0 +1,56 @@
+package com.caps;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Date;
+import java.util.Properties;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class MyFirstServlet extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+	{
+		resp.setContentType("text/html");
+		PrintWriter out=resp.getWriter();
+		//get jdbc connection
+		Connection con=null;
+		FileReader fr=new FileReader("D:/dbprop/db.properties");
+		Properties prop=new Properties();
+		prop.load(fr);
+		String dburl="jdbc:mysql://localhost:3306/caps50_db";
+		try {
+			con=DriverManager.getConnection(dburl,prop);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		//issue query
+		String query="SELECT * from person_info";
+		try {
+			Statement stmt=con.createStatement();
+			ResultSet rs=stmt.executeQuery(query);
+			while(rs.next())
+			{
+				int regno=rs.getInt(1);
+				String fname=rs.getString(2);
+				String lname=rs.getString(3);
+				out.println(regno+" "+fname+" "+lname);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}	
+		
+		
+		out.print("<h1>The time is: "+new Date()+"</h1>");
+		
+	}
+}

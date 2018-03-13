@@ -1,0 +1,8 @@
+package com.caps;
+
+public class Main {
+public static void main(String[] args) {
+	MyFirstServlet mfs=new MyFirstServlet();
+	mfs.doGet(req, resp);
+}
+}
