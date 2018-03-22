@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\JDBCCap\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\JDBCCap\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MyLastCapApp" path="/MyLastCapApp" reloadable="true" source="org.eclipse.jst.jee.server:MyLastCapApp"/></Host>
+      <Context docBase="D:\JDBCCap\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\JDBCCap\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MyLastCapApp" path="/MyLastCapApp" reloadable="true" source="org.eclipse.jst.jee.server:MyLastCapApp"/><Context docBase="D:\JDBCCap\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\LPGStock" path="/LPGStock" reloadable="true" source="org.eclipse.jst.jee.server:LPGStock"/></Host>
     </Engine>
   </Service>
 </Server>

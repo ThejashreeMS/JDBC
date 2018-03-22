@@ -16,7 +16,6 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
 	} catch (ClassNotFoundException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 	PrintWriter pw=resp.getWriter();
@@ -36,8 +35,8 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 	JDBCImpl ji=new JDBCImpl();
 	boolean res=ji.insertDetails(p);
 	if(res)
-		pw.print("Data insertion successfull");
+		pw.print("<h2>Data insertion successfull</h2>");
 	else
-		pw.print("Data insertion failed");
+		pw.print("<h2>Data insertion failed</h2>");
 }
 }
